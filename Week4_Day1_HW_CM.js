@@ -85,3 +85,30 @@ class Hamster {
   timmy.exercise()
 
   console.log(timmy)
+
+  class Dinner {
+    constructor(appetizer, entree, desert){
+    this.appetizer = appetizer
+    this.entree = entree
+    this.desert = desert
+    }
+}
+
+class Chef {
+    constructor(name){
+        this.name = name
+        this.dinners = []
+    }    
+    makeDinner(Dinner){
+        this.dinners.push(Dinner)
+    }
+}
+
+const david = new Chef('David')
+const chrisSpecial = new Dinner('shrimp and crab dip', 'bacon cheese burger', 'cheese cake')
+const lisaSpecial = new Dinner('onion rings', 'alfredo pasta with broccoli', 'strawberry sundae')
+const queSpecial = new Dinner('quesadilla', 'rice, beans, and chicken', 'flan')
+david.makeDinner(chrisSpecial)
+david.makeDinner(lisaSpecial)
+david.makeDinner(queSpecial)
+console.log(david)
