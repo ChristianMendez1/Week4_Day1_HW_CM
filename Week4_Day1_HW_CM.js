@@ -1,11 +1,11 @@
-class Hamster {
+class Cat {
     constructor(name){
       this.owner = ''
       this.name = name
-      this.price = 15
+      this.price = 200
     }
-    wheelRun(){
-      console.log('squeak squeak')
+    meow(){
+      console.log('meow')
     }
     eatFood(){
       console.log('nibble nibble')
@@ -22,7 +22,7 @@ class Hamster {
       this.height = 0
       this.weight = 0
       this.mood = 0
-      this.hamsters = []
+      this.Cats = []
       this.bankAccount = 0
     }
     getName(){
@@ -51,40 +51,40 @@ class Hamster {
       this.mood--
       this.bankAccount+=10
     }
-    buyHamster(hamster){
-      this.hamsters.push(hamster)
+    buyCat(Cat){
+      this.Cats.push(Cat)
       this.mood+=10
-      this.bankAccount-=hamster.getPrice()
+      this.bankAccount-=Cat.getPrice()
     }
   }
 
-  const timmy = new Person('Timmy')
-  for(let i =0; i < 5; i++){
-    timmy.ageUp()
+  const chris = new Person('Chris')
+  for(let i = 1; i <= 5; i++){
+    chris.ageUp()
   }
-  for(let i =0; i < 5; i++){
-    timmy.eat()
+  for(let i = 1; i <= 5; i++){
+    chris.eat()
   }
-  for(let i =0; i < 5; i++){
-    timmy.exercise()
+  for(let i = 1; i <= 5; i++){
+    chris.exercise()
   }
-  for(let i =0; i < 9; i++){
-    timmy.ageUp()
+  for(let i = 1; i <= 9; i++){
+    chris.ageUp()
   }
 
-  const gus = new Hamster('Gus')
-  gus.owner = 'Timmy'
-  timmy.buyHamster(gus)
+  const silverhand = new Cat('Silverhand')
+  silverhand.owner = 'Chris'
+  chris.buyCat(silverhand)
   
-  for(let i =0; i < 15; i++){
-    timmy.ageUp()
+  for(let i = 1; i <= 15; i++){
+    chris.ageUp()
   }
-  timmy.eat()
-  timmy.eat()
-  timmy.exercise()
-  timmy.exercise()
+  chris.eat()
+  chris.eat()
+  chris.exercise()
+  chris.exercise()
 
-  console.log(timmy)
+  console.log(chris)
 
   class Dinner {
     constructor(appetizer, entree, desert){
